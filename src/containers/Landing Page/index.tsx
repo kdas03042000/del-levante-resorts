@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import moment from 'moment';
 import MainResortImage from 'images/resort-1.jpg';
 import { useLandingPageStyles } from './styles';
@@ -27,7 +27,24 @@ const LandingPage = () => {
     );
   };
 
-  return <div className={classes.root}>{getGreetingText()}</div>;
+  const getCompanyName = () => (
+    <Typography variant="h1" className={classes.companyName}>
+      Del-Levante Resorts
+    </Typography>
+  );
+
+  return (
+    <div className={classes.root}>
+      <Grid container>
+        <Grid container justifyContent="center" item xs={12}>
+          {getGreetingText()}
+        </Grid>
+        <Grid container justifyContent="center" item xs={12}>
+          {getCompanyName()}
+        </Grid>
+      </Grid>
+    </div>
+  );
 };
 
 export default LandingPage;
