@@ -9,8 +9,8 @@ const useAnimatedScrollDownStyles = makeStyles((theme) => ({
     '& > *': {
       height: '1.5rem',
       width: '1.5rem',
-      borderBottom: '0.3rem solid #06A8FF',
-      borderRight: '0.3rem solid #06A8FF',
+      borderBottom: '0.3rem solid #00FFFF',
+      borderRight: '0.3rem solid #00FFFF',
       margin: '-1rem',
       animation: `$scroll 2s infinite`,
     },
