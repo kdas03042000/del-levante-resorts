@@ -1,6 +1,7 @@
 import { Typography, Grid } from '@material-ui/core';
 import moment from 'moment';
 import MainResortImage from 'images/resort-1.jpg';
+import AnimatedScrollDown from 'components/AnimatedScrollDown';
 import { useLandingPageStyles } from './styles';
 
 const LandingPage = () => {
@@ -32,7 +33,6 @@ const LandingPage = () => {
       <Grid
         container
         justifyContent="center"
-        // className={classes.companyText1}
         item
         xs={12}
       >
@@ -64,6 +64,9 @@ const LandingPage = () => {
           {getCompanyName()}
         </Grid>
       </Grid>
+      <div className={classes.scrollDownContainer}>
+        <AnimatedScrollDown />
+      </div>
     </div>
   );
 };
