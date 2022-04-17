@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useLandingPageStyles = makeStyles((theme) => ({
   root: (props: any) => ({
     backgroundImage: `url(${props.MainResortImage})`,
-    height: '100%',
+    backgroundSize: 'cover',
+    height: '100vh',
     width: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -12,22 +13,38 @@ export const useLandingPageStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
     fontFamily: `'Lobster', 'sans-serif'`,
   },
-  companyName: {
-    fontWeight: 900,
+  companyNameRoot: {
     fontStyle: 'italic',
+    textTransform: 'uppercase',
+    letterSpacing: '0.5rem',
+    transform: `translateY(10rem)`,
+    opacity: 0,
     background: `linear-gradient(to right,#00F260,#F79D00,#0575E6,#64F38C)`,
-    // background: `linear-gradient(to right,#FF8B00,#C06832,#814663,#412395,#0200C6)`,
-    // background: `linear-gradient(-45deg,#4568dc,#b06ab3)`,
     WebkitBackgroundClip: 'text',
     color: 'transparent',
     backgroundSize: '300%',
     backgroundPosition: '-100%',
-    animation: `$animatedCompanyName 5s infinite alternate-reverse`,
+    animation: `$animatedCompanyText1 2s 2s ease-in-out forwards, $animatedCompanyName 5s infinite alternate-reverse`,
+  },
+  companyName: {
+    fontWeight: 900,
+    letterSpacing: '1rem',
+    fontFamily: `'Roboto', 'sans-serif'`,
   },
 
   '@keyframes animatedCompanyName': {
     to: {
       backgroundPosition: '100%',
+    },
+  },
+  '@keyframes animatedCompanyText1': {
+    '0%': {
+      opacity: 0,
+      transform: `translateY(10rem)`,
+    },
+    '100%': {
+      opacity: 1,
+      transform: `translateY(0)`,
     },
   },
 }));

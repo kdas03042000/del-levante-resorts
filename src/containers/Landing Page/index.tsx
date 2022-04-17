@@ -28,9 +28,24 @@ const LandingPage = () => {
   };
 
   const getCompanyName = () => (
-    <Typography variant="h1" className={classes.companyName}>
-      Del-Levante Resorts
-    </Typography>
+    <>
+      <Grid
+        container
+        justifyContent="center"
+        // className={classes.companyText1}
+        item
+        xs={12}
+      >
+        <Typography variant="h1" className={`${classes.companyName}`}>
+          Del-Levante Resorts
+        </Typography>
+      </Grid>
+      <Grid container justifyContent="center" item xs={12}>
+        <Typography variant="h3" className={classes.companyName}>
+          welcomes you
+        </Typography>
+      </Grid>
+    </>
   );
 
   return (
@@ -39,7 +54,13 @@ const LandingPage = () => {
         <Grid container justifyContent="center" item xs={12}>
           {getGreetingText()}
         </Grid>
-        <Grid container justifyContent="center" item xs={12}>
+        <Grid
+          container
+          justifyContent="center"
+          item
+          xs={12}
+          className={classes.companyNameRoot}
+        >
           {getCompanyName()}
         </Grid>
       </Grid>
