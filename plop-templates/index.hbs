@@ -1,10 +1,16 @@
+{{#if memoize}}
 import React from 'react';
-import { use{{folderName}}Styles } from './styles';
+{{/if}}
+import { use{{pascalCase folderName}}Styles } from './styles';
 
-const {{folderName}} = () => {
-    const classes = use{{folderName}}Styles();
+const {{pascalCase folderName}} = () => {
+    const classes = use{{pascalCase folderName}}Styles();
 
     return <div className={classes.root}></div>;
 };
 
-export default React.memo({{folderName}});
+{{#if memoize}}
+export default React.memo({{pascalCase folderName}});
+{{else}}
+export default {{pascalCase folderName}};
+{{/if}}
