@@ -5,7 +5,7 @@ import AnimatedScrollDown from 'components/AnimatedScrollDown';
 import { useLandingPageStyles } from './styles';
 
 const LandingPage = () => {
-  const classes = useLandingPageStyles({ MainResortImage });
+  const classes = useLandingPageStyles({ image: MainResortImage });
 
   const getGreetingText = () => {
     const hour = moment().hour();

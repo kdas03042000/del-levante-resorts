@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useLandingPageStyles = makeStyles((theme) => ({
   root: (props: any) => ({
-    backgroundImage: `url(${props.MainResortImage})`,
+    backgroundImage: `url(${props.image})`,
     backgroundSize: 'cover',
     height: '100vh',
     width: '100%',
