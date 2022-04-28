@@ -4,7 +4,7 @@ const config: ISourceOptions = {
   fullScreen: {
     enable: false,
   },
-  fpsLimit: 120,
+  fpsLimit: 1000,
   interactivity: {
     events: {
       onClick: {

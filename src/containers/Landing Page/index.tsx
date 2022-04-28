@@ -1,6 +1,6 @@
 import { Typography, Grid } from '@material-ui/core';
 import moment from 'moment';
-import MainResortImage from 'images/resort-1.jpg';
+import MainResortImage from 'assets/images/resort-1.jpg';
 import AnimatedScrollDown from 'components/AnimatedScrollDown';
 import { useLandingPageStyles } from './styles';
 
