@@ -1,6 +1,7 @@
 import { Typography, Grid } from '@material-ui/core';
 import moment from 'moment';
 import MainResortImage from 'assets/images/resort-1.jpg';
+import video_1 from 'assets/videos/video-3.mp4';
 import AnimatedScrollDown from 'components/AnimatedScrollDown';
 import { useLandingPageStyles } from './styles';
 
@@ -48,25 +49,31 @@ const LandingPage = () => {
     </>
   );
 
+  // return (
+  //   <div className={classes.root}>
+  //     <Grid container>
+  //       <Grid container justifyContent="center" item xs={12}>
+  //         {getGreetingText()}
+  //       </Grid>
+  //       <Grid
+  //         container
+  //         justifyContent="center"
+  //         item
+  //         xs={12}
+  //         className={classes.companyNameRoot}
+  //       >
+  //         {getCompanyName()}
+  //       </Grid>
+  //     </Grid>
+  //     <div className={classes.scrollDownContainer}>
+  //       <AnimatedScrollDown />
+  //     </div>
+  //   </div>
+  // );
   return (
-    <div className={classes.root}>
-      <Grid container>
-        <Grid container justifyContent="center" item xs={12}>
-          {getGreetingText()}
-        </Grid>
-        <Grid
-          container
-          justifyContent="center"
-          item
-          xs={12}
-          className={classes.companyNameRoot}
-        >
-          {getCompanyName()}
-        </Grid>
-      </Grid>
-      <div className={classes.scrollDownContainer}>
-        <AnimatedScrollDown />
-      </div>
+    <div>
+      <video src={video_1} className={classes.video} loop autoPlay muted></video>
+      {/* <Typography variant="h2">Hello</Typography> */}
     </div>
   );
 };

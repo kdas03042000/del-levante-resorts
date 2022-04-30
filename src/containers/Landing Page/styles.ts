@@ -39,6 +39,11 @@ export const useLandingPageStyles = makeStyles((theme) => ({
     opacity: 0,
     animation: `$scrollDownContainerAnimation 1s 3.5s forwards`,
   },
+  video: {
+    objectFit: 'cover',
+    height: '100vh',
+    width: '100%',
+  },
 
   '@keyframes animatedCompanyName': {
     to: {
