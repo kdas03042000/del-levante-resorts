@@ -4,7 +4,7 @@ const config: ISourceOptions = {
   fullScreen: {
     enable: false,
   },
-  fpsLimit: 1000,
+  fpsLimit: 120,
   interactivity: {
     events: {
       onClick: {
@@ -39,7 +39,7 @@ const config: ISourceOptions = {
       width: 1,
     },
     collisions: {
-      enable: true,
+      enable: false,
     },
     move: {
       direction: 'none',
@@ -49,14 +49,14 @@ const config: ISourceOptions = {
       },
       random: false,
       speed: 6,
-      straight: false,
+      straight: true,
     },
     number: {
       density: {
         enable: true,
         area: 800,
       },
-      value: 150,
+      value: 100,
     },
     opacity: {
       value: 0.5,
@@ -65,7 +65,8 @@ const config: ISourceOptions = {
       type: 'circle',
     },
     size: {
-      value: { min: 1, max: 5 },
+      value: { min: 1, max: 7 },
+      random: true,
     },
   },
   detectRetina: true,
