@@ -25,3 +25,15 @@ html {
   width: 100%;
   font-size: calc(0.67vh + 0.67vw);
 }
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+  border-radius: 10rem;
+}

@@ -19,7 +19,6 @@ export const useStyles = makeStyles(() => ({
   introductoryDiv: {
     color: '#fff',
     display: 'flex',
-    // justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     height: '100%',
@@ -46,5 +45,42 @@ export const useStyles = makeStyles(() => ({
     fontWeight: 700,
     marginTop: '4rem',
     fontFamily: `'Gwendolyn', 'sans-serif'`,
+  },
+  actionButtonContainer: {
+    marginTop: '3rem',
+    width: '30%',
+    '& > *': {
+      textAlign: 'center',
+      '& > *': {
+        width: '100%',
+        padding: `0.4rem 0.54rem`,
+        height: '4rem',
+        borderRadius: 0,
+      },
+    },
+    '&:hover $actionButtons': {
+      filter: 'blur(0.2rem)',
+    },
+    '& $actionButtons:hover': {
+      filter: 'blur(0)',
+    },
+  },
+  actionButtons: {
+    transition: '0.3s',
+  },
+  getStartedButton: {
+    color: '#fff',
+    border: `#fff 0.06rem solid`,
+  },
+  exploreButton: {
+    backgroundColor: '#fff',
+    border: `#fff 0.06rem solid`,
+    '&:hover': {
+      backgroundColor: '#fff',
+    },
+  },
+  exploreIcon: {
+    marginLeft: '0.2rem',
+    marginBottom: '0.1rem',
   },
 }));

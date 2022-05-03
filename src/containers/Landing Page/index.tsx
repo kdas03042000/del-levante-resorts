@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Typography, Grid, Button } from '@material-ui/core';
+import { PlayCircleFilled as ExploreIcon } from '@material-ui/icons';
 // import moment from 'moment';
 import MainResortImage from 'assets/images/resort-1.jpg';
 import video_1 from 'assets/videos/video-1.mp4';
@@ -106,6 +107,21 @@ const LandingPage = () => {
           <Typography className={classes1.secondaryAdventureText}>
             those who are <span className={classes1.worthy}>worthy</span>
           </Typography>
+          <Grid
+            container
+            spacing={0}
+            className={classes1.actionButtonContainer}
+          >
+            <Grid item xs={6} className={classes1.actionButtons}>
+              <Button className={classes1.getStartedButton}>Get Started</Button>
+            </Grid>
+            <Grid item xs={6} className={classes1.actionButtons}>
+              <Button className={classes1.exploreButton}>
+                Explore
+                <ExploreIcon className={classes1.exploreIcon} />
+              </Button>
+            </Grid>
+          </Grid>
         </div>
       </div>
     </div>
